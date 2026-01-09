@@ -6,6 +6,5 @@
 ## 包含的文件
 - index.html - 个人网页
 - final_crawler.py - Python爬虫脚本
-- svn_client.py - SVN连接测试脚本
 - HelloWorld.java - Java示例代码
 
