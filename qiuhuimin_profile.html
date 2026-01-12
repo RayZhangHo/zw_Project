@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>邱慧敏 - 财务专业人士</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        
+        /* 头部样式 */
+        .header {
+            background: linear-gradient(135deg, #1a535c 0%, #4ecdc4 100%);
+            color: white;
+            padding: 40px 50px;
+            text-align: center;
+        }
+        
+        .name {
+            font-size: 36px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .title {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            font-size: 14px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        /* 主要内容区域 */
+        .main-content {
+            display: flex;
+            flex: 1;
+        }
+        
+        /* 左侧边栏 */
+        .sidebar {
+            width: 300px;
+            background: #f8f9fa;
+            padding: 30px 25px;
+            border-right: 1px solid #e9ecef;
+        }
+        
+        /* 右侧主内容 */
+        .content {
+            flex: 1;
+            padding: 30px 40px;
+        }
+        
+        /* 区块样式 */
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1a535c;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #4ecdc4;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .section-title::before {
+            content: '';
+            width: 8px;
+            height: 20px;
+            background: linear-gradient(135deg, #1a535c 0%, #4ecdc4 100%);
+            border-radius: 4px;
+        }
+        
+        /* 技能列表 */
+        .skills-list {
+            list-style: none;
+        }
+        
+        .skill-item {
+            margin-bottom: 15px;
+        }
+        
+        .skill-name {
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        .skill-bar {
+            width: 100%;
+            height: 8px;
+            background: #e9ecef;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(135deg, #1a535c 0%, #4ecdc4 100%);
+            border-radius: 4px;
+        }
+        
+        /* 经历项目 */
+        .experience-item {
+            margin-bottom: 25px;
+        }
+        
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+        
+        .experience-title {
+            font-weight: 600;
+            font-size: 16px;
+        }
+        
+        .experience-company {
+            color: #6c757d;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        
+        .experience-period {
+            color: #4ecdc4;
+            font-size: 14px;
+            font-weight: 500;
+        }
+        
+        .experience-description {
+            font-size: 14px;
+            color: #495057;
+            margin-left: 20px;
+            list-style-type: disc;
+        }
+        
+        /* 教育经历 */
+        .education-item {
+            margin-bottom: 20px;
+        }
+        
+        /* 证书列表 */
+        .certification-list {
+            list-style: none;
+        }
+        
+        .certification-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+            
+            .sidebar {
+                width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #e9ecef;
+            }
+            
+            .contact-info {
+                gap: 15px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+        }
+        
+        /* 财务相关图标样式 */
+        .finance-icon {
+            font-size: 24px;
+            color: #1a535c;
+        }
+        
+        /* 成就亮点 */
+        .achievements {
+            background: #e3f2fd;
+            padding: 15px;
+            border-left: 4px solid #2196f3;
+            margin: 15px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        
+        .achievements-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #1976d2;
+        }
+        
+        .achievement-item {
+            margin-left: 20px;
+            margin-bottom: 5px;
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <header class="header">
+            <h1 class="name">邱慧敏</h1>
+            <p class="title">资深财务经理 | 注册会计师 | 财务分析师</p>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📧</span>
+                    <span>huimin.qiu@example.com</span>
+                </div>
+                <div class="contact-item">
+                    <span>📞</span>
+                    <span>138-0000-0000</span>
+                </div>
+                <div class="contact-item">
+                    <span>📍</span>
+                    <span>上海市浦东新区</span>
+                </div>
+                <div class="contact-item">
+                    <span>🔗</span>
+                    <span>LinkedIn: huimin-qiu</span>
+                </div>
+            </div>
+        </header>
+        
+        <!-- 主要内容 -->
+        <div class="main-content">
+            <!-- 左侧边栏 -->
+            <aside class="sidebar">
+                <!-- 专业技能 -->
+                <section class="section">
+                    <h2 class="section-title">专业技能</h2>
+                    <ul class="skills-list">
+                        <li class="skill-item">
+                            <div class="skill-name">财务报表分析</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">成本管理</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">预算编制</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">税务筹划</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">财务建模</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 82%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">SAP系统</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                
+                <!-- 专业证书 -->
+                <section class="section">
+                    <h2 class="section-title">专业证书</h2>
+                    <ul class="certification-list">
+                        <li class="certification-item">
+                            <span>注册会计师 (CPA)</span>
+                            <span>2018</span>
+                        </li>
+                        <li class="certification-item">
+                            <span>中级会计师</span>
+                            <span>2016</span>
+                        </li>
+                        <li class="certification-item">
+                            <span>税务师</span>
+                            <span>2017</span>
+                        </li>
+                        <li class="certification-item">
+                            <span>CMA美国注册管理会计师</span>
+                            <span>2019</span>
+                        </li>
+                    </ul>
+                </section>
+                
+                <!-- 教育背景 -->
+                <section class="section">
+                    <h2 class="section-title">教育背景</h2>
+                    <div class="education-item">
+                        <div class="experience-title">上海财经大学</div>
+                        <div class="experience-company">会计学硕士</div>
+                        <div class="experience-period">2014 - 2016</div>
+                    </div>
+                    <div class="education-item">
+                        <div class="experience-title">南京大学</div>
+                        <div class="experience-company">会计学学士</div>
+                        <div class="experience-period">2010 - 2014</div>
+                    </div>
+                </section>
+                
+                <!-- 语言能力 -->
+                <section class="section">
+                    <h2 class="section-title">语言能力</h2>
+                    <ul class="skills-list">
+                        <li class="skill-item">
+                            <div class="skill-name">普通话</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 100%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">英语</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <div class="skill-name">日语</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 60%"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </aside>
+            
+            <!-- 右侧主内容 -->
+            <main class="content">
+                <!-- 个人简介 -->
+                <section class="section">
+                    <h2 class="section-title">个人简介</h2>
+                    <p>
+                        拥有8年财务领域工作经验，其中5年财务管理经验，具备全面的财务专业知识和丰富的实践经验。
+                        精通财务报表分析、成本管理、预算编制和税务筹划，熟悉国内会计准则和税收法规。
+                        持有注册会计师(CPA)、CMA等专业证书，具备良好的团队管理能力和沟通协调能力。
+                    </p>
+                    <p>
+                        擅长财务数据挖掘和分析，能够为企业提供有价值的财务决策支持。
+                        具有大型企业财务体系建设和流程优化经验，熟悉SAP等ERP系统操作。
+                        工作认真负责，具备较强的学习能力和适应能力，能够承受工作压力。
+                    </p>
+                </section>
+                
+                <!-- 工作经历 -->
+                <section class="section">
+                    <h2 class="section-title">工作经历</h2>
+                    
+                    <!-- 最近工作 -->
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-title">财务经理</div>
+                                <div class="experience-company">上海某某科技股份有限公司</div>
+                            </div>
+                            <div class="experience-period">2020.03 - 至今</div>
+                        </div>
+                        <ul class="experience-description">
+                            <li>负责公司全面财务管理工作，包括财务报表编制、财务分析、成本控制、预算管理等</li>
+                            <li>建立健全公司财务管理制度和流程，优化财务工作流程，提高工作效率30%</li>
+                            <li>组织编制公司年度预算和季度滚动预算，实现预算执行率95%以上</li>
+                            <li>负责公司税务筹划工作，合理降低税负，每年为公司节约税收成本约50万元</li>
+                            <li>领导财务团队完成IPO财务规范工作，协助公司顺利完成上市</li>
+                            <li>定期向管理层提供财务分析报告，为公司决策提供数据支持</li>
+                            <li>负责与银行、税务、审计等外部机构的沟通协调工作</li>
+                        </ul>
+                        
+                        <div class="achievements">
+                            <div class="achievements-title">主要成就：</div>
+                            <ul>
+                                <li class="achievement-item">建立了完善的成本核算体系，成本核算准确率提高到98%以上</li>
+                                <li class="achievement-item">主导完成了公司SAP系统的升级和优化，财务处理效率提升40%</li>
+                                <li class="achievement-item">成功申请了多项税收优惠政策，为公司节约税收成本累计超过200万元</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- 上一份工作 -->
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-title">财务主管</div>
+                                <div class="experience-company">北京某某制造有限公司</div>
+                            </div>
+                            <div class="experience-period">2017.05 - 2020.02</div>
+                        </div>
+                        <ul class="experience-description">
+                            <li>负责公司财务报表的编制和审核，确保报表的准确性和及时性</li>
+                            <li>组织开展成本分析工作，提出成本控制建议，实现成本降低15%</li>
+                            <li>参与公司年度预算编制工作，负责预算执行情况的跟踪和分析</li>
+                            <li>负责公司税务申报和税务合规工作，确保公司税务合规</li>
+                            <li>协助财务经理完成财务管理工作，参与财务制度的制定和完善</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- 更早的工作 -->
+                    <div class="experience-item">
+                        <div class="experience-header">
+                            <div>
+                                <div class="experience-title">财务分析师</div>
+                                <div class="experience-company">上海某某会计师事务所</div>
+                            </div>
+                            <div class="experience-period">2016.07 - 2017.04</div>
+                        </div>
+                        <ul class="experience-description">
+                            <li>参与多家企业的财务审计工作，熟悉企业财务核算和内部控制</li>
+                            <li>负责企业财务报表分析，为客户提供财务改进建议</li>
+                            <li>协助项目经理完成审计报告的编制和审核工作</li>
+                        </ul>
+                    </div>
+                </section>
+                
+                <!-- 专业能力 -->
+                <section class="section">
+                    <h2 class="section-title">专业能力</h2>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                        <div>
+                            <h4 style="color: #1a535c; margin-bottom: 10px;">财务核算与报告</h4>
+                            <ul style="margin-left: 20px; font-size: 14px;">
+                                <li>精通企业会计准则和财务报表编制</li>
+                                <li>具备合并财务报表编制经验</li>
+                                <li>熟悉财务报告披露要求</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 style="color: #1a535c; margin-bottom: 10px;">财务分析与决策</h4>
+                            <ul style="margin-left: 20px; font-size: 14px;">
+                                <li>擅长财务比率分析和趋势分析</li>
+                                <li>具备财务建模和预测能力</li>
+                                <li>能够为企业提供决策支持</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 style="color: #1a535c; margin-bottom: 10px;">成本与预算管理</h4>
+                            <ul style="margin-left: 20px; font-size: 14px;">
+                                <li>精通成本核算和成本控制</li>
+                                <li>具备全面预算管理经验</li>
+                                <li>能够优化成本结构</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 style="color: #1a535c; margin-bottom: 10px;">税务与合规</h4>
+                            <ul style="margin-left: 20px; font-size: 14px;">
+                                <li>熟悉国内税收法规</li>
+                                <li>具备税务筹划能力</li>
+                                <li>确保企业税务合规</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
